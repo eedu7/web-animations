@@ -9,15 +9,25 @@ body {
   width: 100px;
   height: 100px;
   background-color: #ffbf00;
-  animation: 2s ease-in-out 3 alternate move;
-  animation-fill-mode: forwards;
+  background-image: linear-gradient(gold, purple);
+  animation: 10s flip-bg, 5s fade-out;
+  animation-fill-mode: both;
 }
 
-@keyframes move {
+@keyframes fade-out {
   0% {
-    transform: translateX(0);
+    display: block;
   }
   100% {
-    transform: translateX(calc(100vw - 140px));
+    display: none;
+  }
+}
+
+@keyframes flip-bg {
+  50% {
+    background-image: linear-gradient(violet, skyblue);
+  }
+  100% {
+    background-image: linear-gradient(greenyellow, maroon);
   }
 }
