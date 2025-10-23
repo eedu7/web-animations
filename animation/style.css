@@ -9,9 +9,8 @@ body {
   width: 100px;
   height: 100px;
   background-color: #ffbf00;
-  animation: 2s ease-in-out infinite alternate move paused;
+  animation: 2s ease-in-out 3 alternate move;
   animation-fill-mode: forwards;
-  
 }
 
 @keyframes move {
