@@ -9,14 +9,13 @@ body {
   width: 100px;
   height: 100px;
   background-color: #ffbf00;
-  transform: rotate(45deg);
-  animation: 2s ease-in-out infinite alternate move;
-  animation-composition: add;
+  animation: 2s ease-in-out infinite alternate move paused;
+  animation-fill-mode: forwards;
 }
 
 @keyframes move {
   0% {
-    transform: translateX(0) rotate(45deg);
+    transform: translateX(0);
   }
   100% {
     transform: translateX(calc(100vw - 140px));
